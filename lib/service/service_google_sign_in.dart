@@ -9,9 +9,15 @@ abstract class IGoogleSignInService {
 }
 
 class GoogleSignInService implements IGoogleSignInService {
-  final GoogleSignInProvider googleSignInProvider;
+  static final GoogleSignInService _instance = GoogleSignInService._internal();
 
-  GoogleSignInService({required this.googleSignInProvider});
+  factory GoogleSignInService() {
+    return _instance;
+  }
+
+  GoogleSignInService._internal();
+
+  final GoogleSignInProvider googleSignInProvider = GoogleSignInProvider();
 
   GoogleSignIn get getGoogleSignIn => googleSignInProvider.googleSignIn;
 

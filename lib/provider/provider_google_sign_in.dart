@@ -8,6 +8,15 @@ abstract class IGoogleSignInProvider {
 }
 
 class GoogleSignInProvider implements IGoogleSignInProvider {
+  static final GoogleSignInProvider _instance =
+      GoogleSignInProvider._internal();
+
+  factory GoogleSignInProvider() {
+    return _instance;
+  }
+
+  GoogleSignInProvider._internal();
+
   final GoogleSignIn googleSignIn = GoogleSignIn(
     scopes: <String>[
       SheetsApi.driveScope,
