@@ -32,7 +32,7 @@ class GoogleSignInService implements IGoogleSignInService {
   }
 
   @override
-  Future<void> signInSilently() async {
-    await googleSignInProvider.signInSilently();
+  Future<GoogleSignInAccount?> signInSilently() async {
+    return await googleSignInProvider.signInSilently();
   }
 }

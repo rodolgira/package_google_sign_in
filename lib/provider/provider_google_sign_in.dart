@@ -38,7 +38,7 @@ class GoogleSignInProvider implements IGoogleSignInProvider {
   Future<void> handleSignOut() => googleSignIn.disconnect();
 
   @override
-  Future<void> signInSilently() async {
-    googleSignIn.signInSilently();
+  Future<GoogleSignInAccount?> signInSilently() async {
+    return await googleSignIn.signInSilently();
   }
 }
