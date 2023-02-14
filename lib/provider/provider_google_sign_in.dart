@@ -22,6 +22,17 @@ class GoogleSignInProvider implements IGoogleSignInProvider {
       SheetsApi.driveScope,
       SheetsApi.spreadsheetsScope,
       SheetsApi.driveFileScope,
+      ClassroomApi.classroomCoursesScope,
+      ClassroomApi.classroomAnnouncementsScope,
+      ClassroomApi.classroomCourseworkMeScope,
+      ClassroomApi.classroomCourseworkStudentsScope,
+      ClassroomApi.classroomCourseworkmaterialsScope,
+      ClassroomApi.classroomGuardianlinksStudentsReadonlyScope,
+      ClassroomApi.classroomTopicsScope,
+      ClassroomApi.classroomRostersScope,
+      ClassroomApi.classroomProfilePhotosScope,
+      ClassroomApi.classroomProfileEmailsScope,
+
     ],
   );
 
